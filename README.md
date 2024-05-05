@@ -61,12 +61,12 @@ To run the application, you will need to follow the steps below:
 1. Clone the repository to your local machine.
 2. Set up a MySQL database and configure the connection properties in `context.xml`.
 3. Run the database scripts to create a user and load sample data:
-   - `sql-scripts/01-create-user.sql`
-   - `sql-scripts/02-employee-departments.sql`
+    - `sql-scripts/01-create-user.sql`
+    - `sql-scripts/02-employee-departments.sql`
 4. Build and deploy the project to a servlet container such as Apache Tomcat.
 5. Run the application:
-   - Select the file `WebContent/index.html`
-   - Right-Click, select `Run As` > `Run On Server`
+    - Select the file `WebContent/index.html`
+    - Right-Click, select `Run As` > `Run On Server`
 6. Access the web application using a web browser.
 
 ## Usage
