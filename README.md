@@ -56,7 +56,7 @@ The project structure is organized as follows:
 
 ## Setup
 
-To run the application, you will need to follow the steps below:
+To run the application, you will need to follow the steps below: 
 
 1. Clone the repository to your local machine.
 2. Set up a MySQL database and configure the connection properties in `context.xml`.
