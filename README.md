@@ -43,7 +43,7 @@ The project structure is organized as follows:
 To run the application, you will to follow the steps below:
 1. Clone the repository to your local machine.
 2. Set up a MySQL database and configure the connection properties in `context.xml`.
-3. Run the database scripts to create a user and load sample data
+3. Run the database scripts to create a user and load sample data:
    a. sql-scripts/01-create-user.sql
    b. sql-scripts/02-employee-departments.sql
 4. Build and deploy the project to a servlet container such as Apache Tomcat.
