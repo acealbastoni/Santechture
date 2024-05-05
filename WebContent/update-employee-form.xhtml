@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Update Employee</title>
+
+	<h:outputStylesheet library="css" name="style.css" />
+	<h:outputStylesheet library="css" name="add-employee-style.css" />
+
+</h:head>
+
+<h:body>
+
+	<div id="wrapper">
+		<div id="header">
+			<h2>Santechture Test</h2>
+		</div>
+	</div>
+
+	<div id="container">
+		<h3>Update Employee</h3>
+
+		<h:messages globalOnly="true" />
+		<h:form id="form" style="margin-top: 10px;">
+			<p:panelGrid columns="2" columnClasses="label, value"
+				styleClass="employee-form">
+				<h:outputLabel value="ID" />
+				<h:outputLabel value="#{employee.id}" />
+
+
+				<h:outputLabel for="empName" value="Employee name:" />
+				<h:inputText id="empName" value="#{employee.name}" required="true" />
+
+				<h:outputLabel for="gender" value="Gender:" />
+				<p:selectOneMenu id="gender" value="#{employee.gender}"
+					required="true" styleClass="form-control">
+					<f:selectItem itemLabel="Select Gender" itemValue="" />
+					<f:selectItem itemLabel="Male" itemValue="Male" />
+					<f:selectItem itemLabel="Female" itemValue="Female" />
+				</p:selectOneMenu>
+
+				<h:outputLabel for="department" value="Department:" />
+				<p:selectOneMenu id="department" value="#{employee.department_id}"
+					required="true" styleClass="form-control">
+					<f:selectItem itemLabel="Select Department" itemValue="" />
+					<f:selectItem itemLabel="CS" itemValue="1" />
+					<f:selectItem itemLabel="IT" itemValue="2" />
+					<f:selectItem itemLabel="IS" itemValue="3" />
+				</p:selectOneMenu>
+			</p:panelGrid>
+			<h:inputHidden value="#{employee.id}" />
+			<p:commandButton value="Save" styleClass="save"
+				action="#{employeeController.updateEmployee(employee)}" />
+
+			<p:messages />
+		</h:form>
+
+
+
+		<div style="clear: both;"></div>
+
+		<p>
+			<h:outputLink value="list-employees.xhtml">Back to List</h:outputLink>
+		</p>
+
+	</div>
+</h:body>
+
+</html>
